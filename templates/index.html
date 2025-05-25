@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SHIVINNN Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="header">
+    <img src="/static/shivinnn_logo.png" alt="SHIVINNN" height="50"/>
+    <h1>SHIVINNN Chat</h1>
+  </div>
+
+  <div id="chat-box"></div>
+
+  <div class="input-area">
+    <button id="emoji-btn">😊</button>
+    <input type="text" id="msg" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+  <script src="{{ url_for('static', filename='emoji-button.js') }}"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
